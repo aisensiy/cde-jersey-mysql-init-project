@@ -8,10 +8,10 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String entryPointOfTestTarget = System.getenv("ENTRYPOINT");
+        String entryPointOfTestTarget = System.getenv("ENDPOINT");
         Main instance = new Main();
         if (entryPointOfTestTarget == null) {
-            System.err.println("ENTRYPOINT NOT SET");
+            System.err.println("ENDPOINT NOT SET");
             instance.exit(1, false);
         }
         Result result = JUnitCore.runClasses(JunitTestSuite.class);
